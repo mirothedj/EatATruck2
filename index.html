@@ -2,10 +2,21 @@
 <html>
 <head>
   <title>Eat-A-Truck</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <h1>Eat-A-Truck</h1>
-  <p>Value of 'foo' from Redis: <span id="redis-value"></span></p>
+  <header>
+    <h1>Eat-A-Truck</h1>
+  </header>
+
+  <main>
+    <h2>Redis Data</h2>
+    <p>Value of 'foo' from Redis: <span id="redis-value"></span></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Eat-A-Truck</p>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/@upstash/redis/dist/index.umd.js"></script>
   <script>

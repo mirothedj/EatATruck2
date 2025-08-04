@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Eat-A-Truck</title>
+</head>
+<body>
+  <h1>Eat-A-Truck</h1>
+  <p>Value of 'foo' from Redis: <span id="redis-value"></span></p>
+
+  <script src="https://cdn.jsdelivr.net/npm/@upstash/redis/dist/index.umd.js"></script>
+  <script>
+    const { Redis } = upstash;
+
+    const redis = new Redis({
+      url: 'https://divine-crawdad-9302.upstash.io',
+      token: 'AiRWAAIgcDE8NDd8_OcoZ-I1NV5Nuz7-J17xF6qpXIXKj5-jkObJzg',
+    });
+
+    async function getValue() {
+      const data = await redis.get('foo');
+      document.getElementById('redis-value').textContent = data;
+    }
+
+    getValue();
+  </script>
+</body>
+</html>

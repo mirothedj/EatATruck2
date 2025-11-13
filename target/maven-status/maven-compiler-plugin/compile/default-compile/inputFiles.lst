@@ -1,0 +1,8 @@
+/app/src/main/java/com/eatatruck/App.java
+/app/src/main/java/com/eatatruck/Campaign.java
+/app/src/main/java/com/eatatruck/LocalDateTimeAdapter.java
+/app/src/main/java/com/eatatruck/LocationSimulator.java
+/app/src/main/java/com/eatatruck/MenuItem.java
+/app/src/main/java/com/eatatruck/RedisManager.java
+/app/src/main/java/com/eatatruck/SmsHandler.java
+/app/src/main/java/com/eatatruck/SocialMediaPoster.java

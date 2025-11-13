@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EatATruck2 - UI Template</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            background-color: #f0f2f5;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .phone-frame {
+            width: 375px;
+            height: 812px;
+            background-color: #fff;
+            border: 16px solid #111;
+            border-radius: 36px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        .top-bar {
+            background-color: #fff;
+            padding: 20px;
+            font-size: 1.2em;
+            font-weight: 600;
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+            flex-shrink: 0;
+        }
+        .main-content {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding: 20px;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .card h3 {
+            margin-top: 0;
+            font-size: 1.1em;
+        }
+        .button {
+            background-color: #007aff;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: 500;
+            text-align: center;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .bottom-nav {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+            background-color: #fff;
+            border-top: 1px solid #e0e0e0;
+            flex-shrink: 0;
+        }
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #8e8e93;
+            cursor: pointer;
+        }
+        .nav-item.active {
+            color: #007aff;
+        }
+        .nav-item svg {
+            width: 24px;
+            height: 24px;
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="phone-frame">
+        <div class="top-bar">
+            Eat-A-Truck
+        </div>
+        <div class="main-content">
+            <!-- This content would be dynamically swapped based on navigation -->
+            <div id="home-screen">
+                <div class="card">
+                    <h3>Status</h3>
+                    <p>Monitoring location... 🚚</p>
+                </div>
+                <div class="card">
+                    <h3>Manual Check-in</h3>
+                    <p>If you're at a location but the app hasn't triggered, you can start here.</p>
+                    <button class="button">Open for Business</button>
+                </div>
+            </div>
+
+            <!-- Other screens would be hidden by default -->
+            <div id="menu-screen" style="display: none;">
+                <div class="card">
+                    <h3>Menu Management</h3>
+                    <p>Add, edit, or remove your menu items.</p>
+                    <button class="button">Add New Item</button>
+                </div>
+                <!-- Menu items would be listed here -->
+            </div>
+
+        </div>
+        <div class="bottom-nav">
+            <div class="nav-item active">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                <span>Home</span>
+            </div>
+            <div class="nav-item">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                <span>Menu</span>
+            </div>
+            <div class="nav-item">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                <span>Campaigns</span>
+            </div>
+            <div class="nav-item">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4m-2 0h14"/></svg>
+                <span>Analytics</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
